@@ -95,6 +95,10 @@ bookLibrary.addBook({
     author:'Masashi Kishimoto',
     yearPublished : 1987
 })
+bookLibrary.addBook({
+    title:'Chainsaw Man',
+    author:'Tatsuki Fujimoto'    
+})
 bookLibrary.getBooksByAuthor('J.K. Rowling');
 bookLibrary.removeBook('Narut3');
 bookLibrary.removeBook('Naruto');
@@ -115,6 +119,7 @@ $ node "d:\Code\JSTraining\Training_Code\Javascript_Concepts_Assignment\tempCode
 ]
 Book added successfully
 { title: 'Naruto', author: 'Masashi Kishimoto', yearPublished: 1987 }
+Provide complete data
 Book Found
 [
   {

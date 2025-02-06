@@ -1,41 +1,137 @@
-// **Assignment 5: Callback Functions with map(), filter(), and **reduce()
-// Task: Create a processData function that accepts an array of numbers and a callback.
-// If the callback is filterOdd, filter out even numbers.
-// If the callback is doubleNumbers, double each number.
-// If the callback is calculateSum, return the sum of all numbers. Bonus Task: Implement a callback to find the maximum number in the array.
 
-const processData = (numArray,callBackFunction)=>{
-    if(callBackFunction === filterOdd){
-        console.log("Filtering");
-        console.log(numArray.filter(callBackFunction));
-    }
-    else if(callBackFunction === doubleNumbers){ 
-        console.log("Doubling the numbers");
-        console.log(numArray.map(callBackFunction));
-    }
-    else if(callBackFunction === calculateSum){ 
-        console.log("Calculate Sum");
-        console.log(numArray.reduce(callBackFunction,0));
-    }
-    else if(callBackFunction === getMax){ 
-        console.log("The maximum value in the array");
-        console.log(numArray.reduce(callBackFunction,numArray[0]));
-    }
-    else if(callBackFunction===undefined){
-        console.log("invalid Callback function");
-    }
-    else{
-        console.log("invalid");
-    }
+// Assignment 2: Working with Objects
+// Task: Create an object bookLibrary to manage a collection of books.
+// The object should have the following properties and methods:
+// books: An array of book objects (each book has title, author, and yearPublished).
+// addBook(book): Adds a new book to the collection.
+// getBooksByAuthor(author): Returns all books by a given author.
+// removeBook(title): Removes a book by title.
+// Add a method getAllBooks to return a list of all book titles.
+
+const bookLibrary = {
+    books : [
+        {
+            title: 'To Kill a Mockingbird',
+            author: 'Harper Lee',
+            yearPublished: 1960,
+        },
+        {
+            title: '1984',
+            author: 'George Orwell',
+            yearPublished: 1949,
+        },
+        {
+            title: 'The Great Gatsby',
+            author: 'F. Scott Fitzgerald',
+            yearPublished: 1925,
+        },
+        {
+            title: 'Harry Potter and the Sorcerer\'s Stone',
+            author: 'J.K. Rowling',
+            yearPublished: 1997,
+        },
+        {
+            title: 'Harry Potter and the Chamber of Secrets',
+            author: 'J.K. Rowling',
+            yearPublished: 1998,
+        },
+        {
+            title: 'The Lord of the Rings',
+            author: 'J.R.R. Tolkien',
+            yearPublished: 1954,
+        },
+        {
+            title: 'Pride and Prejudice',
+            author: 'Jane Austen',
+            yearPublished: 1813,
+        },
+        {
+            title: 'The Catcher in the Rye',
+            author: 'J.D. Salinger',
+            yearPublished: 1951,
+        }
+    ],
+    addBook(book){
+        if(book.title && book.author && book.yearPublished){
+            this.books.push(book);
+            console.log("Book added successfully");
+            console.log(book);
+        }
+        else{
+            console.log("Provide complete data");
+        }
+    },
+    getBooksByAuthor(author){
+        const foundBook = this.books.filter((book)=>book.author === author);
+        if(foundBook){
+            console.log("Book Found");
+            console.log(foundBook);
+        }
+        else{
+            console.log("book not found!");
+        }
+    },
+    removeBook(title){
+        
+        const bookToDel = this.books.filter((book)=>book.title === title);
+        
+        if(bookToDel.length!=0){
+            this.books.splice(this.books.indexOf(bookToDel));
+            console.log("book deleted");
+        }
+        else{
+            console.log("book not found");
+        }
+        
+    },
+    getAllBooks(){
+        console.log(this.books.map((book)=>book.title));
+    },
 }
 
-const filterOdd = (num) => {return num%2!=0 }
-const doubleNumbers = (num) => {return num*2 };
-const calculateSum = (accumulator,num) => accumulator+num;
-const getMax = (accumulator,num) => (accumulator > num)?accumulator:num;
+bookLibrary.getAllBooks();
+bookLibrary.addBook({
+    title:'Naruto',
+    author:'Masashi Kishimoto',
+    yearPublished : 1987
+})
+bookLibrary.addBook({
+    title:'Chainsaw Man',
+    author:'Tatsuki Fujimoto'    
+})
+bookLibrary.getBooksByAuthor('J.K. Rowling');
+bookLibrary.removeBook('Narut3');
+bookLibrary.removeBook('Naruto');
 
-const arr1 = [5,2,67,1,7,9,3,5];
-processData(arr1,filterOdd)
-processData(arr1,doubleNumbers)
-processData(arr1,calculateSum)
-processData(arr1,getMax)
+// output 
+
+/*
+$ node "d:\Code\JSTraining\Training_Code\Javascript_Concepts_Assignment\tempCodeRunnerFile.js"
+[
+  'To Kill a Mockingbird',
+  '1984',
+  'The Great Gatsby',
+  "Harry Potter and the Sorcerer's Stone",
+  'Harry Potter and the Chamber of Secrets',
+  'The Lord of the Rings',
+  'Pride and Prejudice',
+  'The Catcher in the Rye'
+]
+Book added successfully
+{ title: 'Naruto', author: 'Masashi Kishimoto', yearPublished: 1987 }
+Book Found
+[
+  {
+    title: "Harry Potter and the Sorcerer's Stone",
+    author: 'J.K. Rowling',
+    yearPublished: 1997
+  },
+  {
+    title: 'Harry Potter and the Chamber of Secrets',
+    author: 'J.K. Rowling',
+    yearPublished: 1998
+  }
+]
+book not found
+book deleted
+*/
