@@ -7,7 +7,7 @@ Assignment_part 1
 ![assignment1_output](https://github.com/user-attachments/assets/f5a058f0-e4a9-4cac-848f-9e942d223e70)
 
 Assignment_part 2
-![assignment2_output](https://github.com/user-attachments/assets/d47d3db4-b62b-4bea-810c-6887043cc7d9)
+![image](https://github.com/user-attachments/assets/21389d7f-f567-455d-bf8d-f492288dfeeb)
 
 Assignment_part 3 (index.html uses this script) 
 ![MemoryLeaksand8morepages-Personal-MicrosoftEdge2025-02-0618-08-08-ezgif com-crop](https://github.com/user-attachments/assets/472d6eec-70ea-4993-bc6e-fba78c190354)
