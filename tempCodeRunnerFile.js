@@ -39,24 +39,3 @@ processData(arr1,filterOdd)
 processData(arr1,doubleNumbers)
 processData(arr1,calculateSum)
 processData(arr1,getMax)
-
-/* 
-OUTPUT
-
-$ node "d:\Code\JSTraining\Training_Code\Javascript_Concepts_Assignment\tempCodeRunnerFile.js"
-Filtering
-[
-  5, 67, 1, 7,
-  9,  3, 5
-]
-Doubling the numbers
-[
-  10,  4, 134,  2,
-  14, 18,   6, 10
-]
-Calculate Sum
-99
-The maximum value in the array
-67
-
-*/

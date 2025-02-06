@@ -25,3 +25,17 @@ const getData = (userNames,err)=>{
 };
 
 fetchData(getData,false);
+fetchData(getData,true);
+// output 
+/*
+[
+    'Johnny Karate',
+    'Billy Baxter',
+    'homosapien',
+    'Chrissy Stranger Things',
+    'Tommy Gun',
+    'Super Saiyajin',
+    'Kakarot!!'
+  ]
+  Error 
+*/

@@ -84,3 +84,43 @@ const getCategoryPrice = (category) =>{
 console.log("Total Electronics Price : ",getCategoryPrice('Electronics'));
 console.log("Total Collectibles Price : ",getCategoryPrice('Collectibles'));
 console.log("Total Apparel Price : ",getCategoryPrice('Apparel'));
+
+/**
+ * OUTPUT
+ $ node "d:\Code\JSTraining\Training_Code\Javascript_Concepts_Assignment\assignment4.js"
+[
+  'IRON MAN HELMET REPLICA',
+  'CAPTAIN AMERICA SHIELD',
+  'SPIDER-MAN SUIT HOODIE',
+  'MJOLNIR HAMMER',
+  'INFINITY GAUNTLET LED REPLICA',
+  'BLACK PANTHER VIBRANIUM NECKLACE',
+  'DOCTOR STRANGE SLING RING',
+  'LOKI TVA VARIANT JACKET',
+  'GROOT FLOWER POT',
+  'DEADPOOL KATANAS WALL MOUNT SET'
+]
+[
+  {
+    name: 'Iron Man Helmet Replica',
+    price: 199,
+    category: 'Electronics'
+  },
+  { name: 'Mjolnir Hammer', price: 129, category: 'Electronics' },
+  {
+    name: 'Infinity Gauntlet LED Replica',
+    price: 249,
+    category: 'Electronics'
+  },
+  {
+    name: 'Black Panther Vibranium Necklace',
+    price: 39,
+    category: 'Electronics'
+  }
+]
+Total Price of all products :  1155
+Total Electronics Price :  616
+Total Collectibles Price :  348
+Total Apparel Price :  138
+
+ */

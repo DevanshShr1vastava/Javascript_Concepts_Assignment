@@ -96,4 +96,38 @@ bookLibrary.addBook({
     yearPublished : 1987
 })
 bookLibrary.getBooksByAuthor('J.K. Rowling');
-bookLibrary.removeBook('Narut3')
+bookLibrary.removeBook('Narut3');
+bookLibrary.removeBook('Naruto');
+
+// output 
+
+/*
+$ node "d:\Code\JSTraining\Training_Code\Javascript_Concepts_Assignment\tempCodeRunnerFile.js"
+[
+  'To Kill a Mockingbird',
+  '1984',
+  'The Great Gatsby',
+  "Harry Potter and the Sorcerer's Stone",
+  'Harry Potter and the Chamber of Secrets',
+  'The Lord of the Rings',
+  'Pride and Prejudice',
+  'The Catcher in the Rye'
+]
+Book added successfully
+{ title: 'Naruto', author: 'Masashi Kishimoto', yearPublished: 1987 }
+Book Found
+[
+  {
+    title: "Harry Potter and the Sorcerer's Stone",
+    author: 'J.K. Rowling',
+    yearPublished: 1997
+  },
+  {
+    title: 'Harry Potter and the Chamber of Secrets',
+    author: 'J.K. Rowling',
+    yearPublished: 1998
+  }
+]
+book not found
+book deleted
+*/
